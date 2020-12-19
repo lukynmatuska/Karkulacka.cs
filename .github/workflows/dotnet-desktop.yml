@@ -57,6 +57,9 @@ jobs:
 
     env:
       Solution_Name: Karkulacka.sln
+      Test_Project_Path: Karkulacka\Karkulacka.csproj
+      Wap_Project_Directory: your-wap-project-directory-name # Replace with the Wap project directory relative to the solution, i.e. MyWpfApp.Package.
+      Wap_Project_Path: your-wap-project-path # Replace with the path to your Wap project, i.e. MyWpf.App.Package\MyWpfApp.Package.wapproj.:
       ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     steps:
