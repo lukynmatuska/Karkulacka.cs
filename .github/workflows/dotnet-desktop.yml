@@ -57,6 +57,7 @@ jobs:
 
     env:
       Solution_Name: Karkulacka.sln
+      ACTIONS_ALLOW_UNSECURE_COMMANDS: true
 
     steps:
     - name: Checkout
