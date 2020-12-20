@@ -9,6 +9,54 @@
   <ItemGroup>
     <None Remove="images\janne-aspegren-Yz9YtDe03PQ-unsplash.jpg" />
     <None Remove="images\tenor.gif" />
+    <None Remove="music\crab-rave.mp3" />
+    <None Remove="music\discord-notification.mp3" />
+    <None Remove="music\drama.mp3" />
+    <None Remove="music\error.mp3" />
+    <None Remove="music\hodne-vysoko-miris.mp3" />
+    <None Remove="music\ice-ice-baby.mp3" />
+    <None Remove="music\je-to-rebel.mp3" />
+    <None Remove="music\nope.mp3" />
+    <None Remove="music\oh-no-no-no-no-laugh.mp3" />
+    <None Remove="music\ph.mp3" />
+    <None Remove="music\vicetone-tony-igy-astronomia-2014-audiotrimmer.mp3" />
+    <None Remove="music\what-are-you-doing-step-bro.mp3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="music\crab-rave.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\discord-notification.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\drama.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\error.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\hodne-vysoko-miris.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\ice-ice-baby.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\je-to-rebel.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\nope.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\oh-no-no-no-no-laugh.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\vicetone-tony-igy-astronomia-2014-audiotrimmer.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="music\what-are-you-doing-step-bro.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
   <ItemGroup>
@@ -22,6 +70,9 @@
     <Resource Include="images\tenor.gif">
       <CopyToOutputDirectory>Never</CopyToOutputDirectory>
     </Resource>
+    <Content Include="music\ph.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

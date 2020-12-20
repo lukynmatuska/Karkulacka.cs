@@ -10,10 +10,11 @@
         Background="Black"
         xmlns:local="clr-namespace:Karkulacka"
         mc:Ignorable="d"
-        Title="Karkulačka" Height="900" Width="750">
+        Title="Karkulačka - The useless calculator" Height="900" Width="750">
     <!-- X(A)ML IS HELL !!! -->
-    <Grid>
+    <Grid Width="Auto">
         <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -26,11 +27,13 @@
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
                 <RowDefinition Height="Auto"/>
+                <RowDefinition Height="Auto"/>
             </Grid.RowDefinitions>
 
             <StackPanel>
-                <TextBlock Text="Zadej první číslo pro výpočet" Foreground="WhiteSmoke" FontSize="25" FontFamily="Comic Sans MS" />
-                <TextBlock Text="Zadej další číslo pro výpočet" Foreground="White" FontSize="25" FontFamily="Comic Sans MS" />
+                <TextBox Name="firstTextBox" Text="Zadej první číslo pro výpočet" Foreground="WhiteSmoke" Background="Black" FontSize="25" FontFamily="Comic Sans MS" />
+                <TextBox Name="secondTextBox" Text="Zadej další číslo pro výpočet" Foreground="White" Background="Black" FontSize="25" FontFamily="Comic Sans MS" />
+                <TextBlock Name="resultTextBlock" Text="Tady bude mozna nekdy vysledek" Foreground="WhiteSmoke"/>
             </StackPanel>
 
             <Grid Grid.Row="1">
@@ -40,33 +43,39 @@
                     <ColumnDefinition/>
                     <ColumnDefinition/>
                 </Grid.ColumnDefinitions>
-                <Button Content="−"/>
-                <Button Content="×" Grid.Column="1"/>
-                <Button Content="÷" Grid.Column="2"/>
-                <Button Content="%" Grid.Column="3"/>
+                <Button Click="setActiveOperation" Content="+" Tag="{x:Static local:Operation.Plus}"/>
+                <Button Click="setActiveOperation" Content="−" Tag="{x:Static local:Operation.Minus}" Grid.Column="1"/>
+                <Button Click="setActiveOperation" Content="×" Tag="{x:Static local:Operation.Multiplication}" Grid.Column="2"/>
+                <Button Click="setActiveOperation" Content="÷" Tag="{x:Static local:Operation.Division}" Grid.Column="3"/>
             </Grid>
             <UniformGrid
                 Grid.Row="2"
                 Columns="3"
                 FlowDirection="RightToLeft">
-                <Button Content="9"/>
-                <Button Content="8"/>
-                <Button Content="7"/>
-                <Button Content="6"/>
-                <Button Content="5"/>
-                <Button Content="4"/>
-                <Button Content="3"/>
-                <Button Content="2"/>
-                <Button Content="1"/>
-                <Button Content="0"/>
+                <Button Content="9" Click="playFromButton" Tag="vicetone-tony-igy-astronomia-2014-audiotrimmer.mp3"/>
+                <Button Content="8" Click="playFromButton" Tag="ice-ice-baby.mp3"/>
+                <Button Content="7" Click="playFromButton" Tag="crab-rave.mp3"/>
+                <Button Content="6" Click="playFromButton" Tag="hodne-vysoko-miris.mp3"/>
+                <Button Content="5" Click="playFromButton" Tag="discord-notification.mp3"/>
+                <Button Content="4" Click="playFromButton" Tag="error.mp3"/>
+                <Button Content="3" Click="playFromButton" Tag="je-to-rebel.mp3"/>
+                <Button Content="2" Click="playFromButton" Tag="nope.mp3"/>
+                <Button Content="1" Click="playFromButton" Tag="drama.mp3"/>
+                <Button Content="0" Click="playFromButton" Tag="what-are-you-doing-step-bro.mp3"/>
             </UniformGrid>
 
-            <Image
-            Visibility="Hidden"
-            Grid.Row="3"
-            VerticalAlignment="Bottom"
-            gif:ImageBehavior.AnimatedSource="./images/tenor.gif" />
-
+            <StackPanel Grid.Row="4">
+                <Button
+                    Content="="
+                    MaxHeight="30"
+                    Name="submitButton"
+                    Click="submitButton_Click" />
+                <Image
+                    Visibility="Visible"
+                    Name="teacher"
+                    VerticalAlignment="Bottom"
+                    gif:ImageBehavior.AnimatedSource="./images/tenor.gif" />
+            </StackPanel>
         </Grid>
         <Image Stretch="Fill" HorizontalAlignment="Right" Grid.Column="1">
             <Image.Source>
